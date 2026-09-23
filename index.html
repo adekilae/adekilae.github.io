@@ -3,48 +3,180 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Frank Anyoka Adekilae — PhD researcher in soil hydrology, soil physics and remote sensing at Louisiana State University." />
+  <meta name="description" content="Frank Anyoka Adekilae — PhD student in soil physics and hydrology at Louisiana State University." />
   <meta name="author" content="Frank Anyoka Adekilae" />
-  <title>Frank Anyoka Adekilae | Soil Hydrology & Remote Sensing</title>
+  <title>Frank Anyoka Adekilae</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    :root{--navy:#102a43;--blue:#21618c;--ink:#233747;--muted:#53687b;--line:#e2e9ee;--bg:#f6f9fb;--gold:#f3c56a}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);line-height:1.7;background:white}a{color:var(--blue)}a:hover{text-decoration-thickness:2px}.wrap{max-width:1120px;margin:auto;padding:0 24px}.top{background:var(--navy);color:white}.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;flex-wrap:wrap}.brand{color:white;text-decoration:none;font-weight:750;letter-spacing:.01em}.links{display:flex;gap:18px;flex-wrap:wrap}.links a{color:#e8f2f8;text-decoration:none;font-size:.91rem}.links a:hover{color:var(--gold)}.hero{background:linear-gradient(135deg,#102a43 0%,#184967 100%);color:white;padding:72px 0 80px}.hero-grid{display:grid;grid-template-columns:1fr 300px;align-items:center;gap:64px}.eyebrow{color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.13em;font-size:.79rem}.hero h1{font-size:clamp(2rem,3.5vw,3.2rem);line-height:1.2;margin:15px 0 16px}.hero p{max-width:690px;color:#e3edf4;font-size:1.08rem}.hero .role{font-size:1.24rem;font-weight:600;color:white}.photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 25%;border-radius:16px;border:5px solid rgba(255,255,255,.9);box-shadow:0 22px 55px #071a2b80}.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-block;padding:11px 18px;border-radius:8px;text-decoration:none;font-weight:650;background:white;color:var(--navy)}.btn.outline{background:transparent;border:1px solid #a9c7d9;color:white}section{padding:66px 0;scroll-margin-top:20px}section.alt{background:var(--bg)}h2{color:var(--navy);font-size:1.85rem;line-height:1.3;margin:0 0 24px}h2:after{content:"";display:block;width:48px;height:4px;background:#e2ac43;border-radius:2px;margin-top:12px}h3{color:var(--navy);margin:0 0 8px;font-size:1.12rem}.lead{font-size:1.07rem;max-width:850px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.panel{background:white;border:1px solid var(--line);border-radius:12px;padding:23px;box-shadow:0 6px 20px #102a4309}.panel p{margin:0;color:var(--muted)}.pub{border-left:4px solid var(--blue);padding:7px 0 8px 20px;margin:18px 0}.pub p{margin:4px 0}.tag{display:inline-block;font-size:.77rem;font-weight:750;text-transform:uppercase;letter-spacing:.07em;color:#1a6383;background:#e9f4f8;border-radius:20px;padding:3px 10px;margin-bottom:8px}.two{display:grid;grid-template-columns:1fr 1fr;gap:25px}.entry{margin-bottom:24px}.entry .meta{color:var(--muted);font-size:.92rem;margin:0 0 6px}.entry p{margin:0}.contact{background:var(--navy);color:white}.contact h2{color:white}.contact a{color:#e8d19d}.email-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.copy{font:inherit;font-size:.88rem;font-weight:650;padding:6px 14px;border-radius:8px;border:1px solid #a9c7d9;background:transparent;color:white;cursor:pointer}.copy:hover{border-color:var(--gold);color:var(--gold)}.footer{background:#0b2032;color:#c9d9e5;padding:22px 0;font-size:.86rem}@media(max-width:800px){.hero-grid{grid-template-columns:1fr;gap:32px}.photo{max-width:280px}.grid,.two{grid-template-columns:1fr}.hero{padding:45px 0}.nav{align-items:flex-start}section{padding:48px 0}}
+    :root{
+      --paper:#fbfaf6;
+      --ink:#2b2926;
+      --soft:#65605a;
+      --rule:#e3ded4;
+      --moss:#4b6340;
+      --clay:#9a5b34;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:18px;line-height:1.65}
+    a{color:var(--moss);text-underline-offset:3px;text-decoration-thickness:1px}
+    a:hover{color:var(--clay)}
+    .wrap{max-width:860px;margin:0 auto;padding:0 22px}
+
+    header{border-bottom:1px solid var(--rule)}
+    nav{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px 24px;padding:20px 0}
+    .brand{font-weight:600;color:var(--ink);text-decoration:none;font-size:1.05rem}
+    .links{display:flex;flex-wrap:wrap;gap:20px;font-family:"Source Sans 3",system-ui,sans-serif;font-size:.95rem}
+    .links a{color:var(--soft);text-decoration:none}
+    .links a:hover{color:var(--moss)}
+
+    .intro{display:grid;grid-template-columns:1fr 220px;gap:48px;align-items:start;padding:64px 0 48px}
+    h1{font-size:2.4rem;line-height:1.15;font-weight:600;margin:0 0 8px;letter-spacing:-.01em}
+    .role{font-family:"Source Sans 3",system-ui,sans-serif;color:var(--soft);font-size:1.02rem;margin:0 0 24px}
+    .intro p{margin:0 0 16px}
+    .quick{font-family:"Source Sans 3",system-ui,sans-serif;font-size:.97rem;margin-top:22px}
+    .quick a{margin-right:18px}
+    .photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 25%;border-radius:4px;display:block}
+
+    section{padding:40px 0;border-top:1px solid var(--rule);scroll-margin-top:12px}
+    h2{font-size:1.45rem;font-weight:600;margin:0 0 18px}
+    h3{font-size:1.08rem;font-weight:600;margin:0 0 4px}
+    p{margin:0 0 14px}
+    .item{margin:0 0 22px}
+    .item p{margin:0}
+    .when{font-family:"Source Sans 3",system-ui,sans-serif;font-size:.9rem;color:var(--soft);margin:0 0 4px}
+    .pub h3{font-style:normal}
+    .pub .venue{font-style:italic;color:var(--soft)}
+    .note{color:var(--soft);font-size:.96rem}
+
+    .email-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+    .copy{font-family:"Source Sans 3",system-ui,sans-serif;font-size:.88rem;padding:4px 12px;border:1px solid var(--rule);border-radius:4px;background:transparent;color:var(--soft);cursor:pointer}
+    .copy:hover{border-color:var(--moss);color:var(--moss)}
+    .profiles a{margin-right:18px}
+
+    footer{border-top:1px solid var(--rule);padding:22px 0 40px;font-family:"Source Sans 3",system-ui,sans-serif;font-size:.88rem;color:var(--soft)}
+
+    @media(max-width:700px){
+      body{font-size:17px}
+      .intro{grid-template-columns:1fr;gap:28px;padding:40px 0 32px}
+      .photo{max-width:200px;order:-1}
+      h1{font-size:2rem}
+    }
   </style>
 </head>
 <body>
-<header class="top"><nav class="wrap nav" aria-label="Main navigation"><a class="brand" href="#home">Frank Anyoka Adekilae</a><div class="links"><a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#service">Service</a><a href="#contact">Contact</a></div></nav></header>
-<main>
-<section id="home" class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Soil physics · Hydrology · Remote sensing</div><h1>Frank Anyoka Adekilae</h1><div class="role">PhD Student & Research Assistant<br>Louisiana State University</div><p>I study how surface observations can reveal root-zone soil moisture dynamics, with applications in drought monitoring, satellite remote sensing, and precision agriculture.</p><div class="buttons"><a class="btn" href="#research">Explore my research</a><a class="btn outline" href="https://doi.org/10.1002/vzj2.70084" target="_blank" rel="noopener">Featured publication ↗</a></div></div><img class="photo" src="profile.jpg" alt="Professional portrait of Frank Anyoka Adekilae" /></div></section>
-<section id="about"><div class="wrap"><h2>About me</h2><p class="lead">I am a PhD student and research assistant in the School of Plant, Environmental, and Soil Sciences at Louisiana State University. My research integrates soil physics, in-situ observations, satellite remote sensing, and computational methods to understand soil-water dynamics across scales.</p><p>My academic background includes an Erasmus Mundus MSc in Soils and Global Change at Ghent University and Aarhus University, and a BSc in Natural Resources Management from Kwame Nkrumah University of Science and Technology, Ghana.</p></div></section>
-<section id="research" class="alt"><div class="wrap"><h2>Research interests</h2><div class="grid"><article class="panel"><span class="tag">01</span><h3>Surface–root-zone connectivity</h3><p>Understanding how near-surface soil moisture observations relate to deeper soil-water storage and memory.</p></article><article class="panel"><span class="tag">02</span><h3>Satellite remote sensing</h3><p>Integrating satellite soil moisture and thermal observations with ground measurements for hydrologic applications.</p></article><article class="panel"><span class="tag">03</span><h3>Drought & precision agriculture</h3><p>Developing interpretable soil moisture indicators to support drought monitoring and agricultural decisions.</p></article></div></div></section>
-<section id="publications"><div class="wrap"><h2>Selected publication</h2><div class="pub"><span class="tag">Peer-reviewed article · 2026</span><h3>Pseudo-diffusivity characteristic curves for surface–rootzone soil hydrologic connectivity</h3><p><em>Vadose Zone Journal</em></p><p><a href="https://doi.org/10.1002/vzj2.70084" target="_blank" rel="noopener">Read the article · DOI: 10.1002/vzj2.70084 ↗</a></p></div><p>Additional publications and manuscripts will be added as they become publicly available.</p></div></section>
-<section id="service" class="alt"><div class="wrap"><h2>Scientific service & leadership</h2><div class="two"><div><div class="entry"><h3>Scientific peer review</h3><p class="meta">2025–2026</p><p>Peer reviewer for international journals and conferences in soil science, hydrology, and remote sensing.</p></div><div class="entry"><h3>AGU Fall Meeting scientific workshop</h3><p class="meta">Co-organizer & instructor · December 2025</p><p>Large-Scale Geospatial Data Analysis and Visualization in R, New Orleans.</p></div></div><div><div class="entry"><h3>2025 Kirkham Conference</h3><p class="meta">Session co-organizer · August 2025</p><p>Rapid Poster Presentations Session #3, J-Village, Japan.</p></div><div class="entry"><h3>Graduate student leadership</h3><p class="meta">Louisiana State University</p><p>Vice President, Graduate Student Association (2026–present); Treasurer (2025–2026).</p></div></div></div></div></section>
-<section id="contact" class="contact"><div class="wrap">
-  <h2>Contact & Academic Profiles</h2>
-  <p>School of Plant, Environmental, and Soil Sciences<br>Louisiana State University<br>Baton Rouge, Louisiana</p>
-  <p class="email-row">
-    <span>Email: <a href="mailto:FAdekilae@agcenter.lsu.edu">FAdekilae@agcenter.lsu.edu</a></span>
-    <button class="copy" type="button" id="copyEmail">Copy email</button>
-  </p>
-  <p>
-    <a href="https://github.com/adekilae" target="_blank" rel="noopener">GitHub ↗</a>
-    &nbsp;·&nbsp;
-    <a href="https://orcid.org/0009-0000-1387-2148" target="_blank" rel="noopener">ORCID ↗</a>
-    &nbsp;·&nbsp;
-    <a href="https://scholar.google.com/citations?user=CMnls_MAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
-  </p>
-</div></section>
+<header>
+  <nav class="wrap" aria-label="Main navigation">
+    <a class="brand" href="#home">Frank Anyoka Adekilae</a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#service">Service</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div id="home" class="intro">
+    <div>
+      <h1>Frank Anyoka Adekilae</h1>
+      <p class="role">PhD student, soil physics &amp; hydrology · Louisiana State University</p>
+      <p>I study soil moisture — mostly how what we can measure at the surface relates to the water held deeper in the root zone, where plants actually draw from.</p>
+      <p>That link matters for drought monitoring, for making good use of satellite data, and for decisions on the farm.</p>
+      <p class="quick">
+        <a href="https://doi.org/10.1002/vzj2.70084" target="_blank" rel="noopener">Latest paper</a>
+        <a href="mailto:FAdekilae@agcenter.lsu.edu">Email</a>
+        <a href="https://scholar.google.com/citations?user=CMnls_MAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      </p>
+    </div>
+    <img class="photo" src="profile.jpg" alt="Portrait of Frank Anyoka Adekilae" />
+  </div>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I'm a PhD student and research assistant in the School of Plant, Environmental, and Soil Sciences at LSU. My work brings together soil physics, field sensor data, satellite observations, and a good amount of code to understand how water moves and is stored in soil — from a single profile up to regional scales.</p>
+    <p>Before coming to LSU, I completed an Erasmus Mundus MSc in Soils and Global Change at Ghent University and Aarhus University. My BSc is in Natural Resources Management from Kwame Nkrumah University of Science and Technology in Ghana.</p>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+    <div class="item">
+      <h3>Surface and root-zone connections</h3>
+      <p>How well does near-surface soil moisture reflect what is happening deeper down, and how long does the soil hold on to a wet or dry spell?</p>
+    </div>
+    <div class="item">
+      <h3>Satellite remote sensing</h3>
+      <p>Pairing satellite soil moisture and thermal observations with ground measurements so these products can be used with more confidence in hydrology.</p>
+    </div>
+    <div class="item">
+      <h3>Drought and agriculture</h3>
+      <p>Building soil moisture indicators that are easy to interpret, for drought monitoring and practical decisions in agriculture.</p>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="item pub">
+      <p class="when">2026</p>
+      <h3><a href="https://doi.org/10.1002/vzj2.70084" target="_blank" rel="noopener">Pseudo-diffusivity characteristic curves for surface–rootzone soil hydrologic connectivity</a></h3>
+      <p class="venue">Vadose Zone Journal · doi:10.1002/vzj2.70084</p>
+    </div>
+    <p class="note">More papers will be added here as they are published.</p>
+  </section>
+
+  <section id="service">
+    <h2>Service and leadership</h2>
+    <div class="item">
+      <p class="when">2025–2026</p>
+      <h3>Peer review</h3>
+      <p>Reviewer for international journals and conferences in soil science, hydrology, and remote sensing.</p>
+    </div>
+    <div class="item">
+      <p class="when">December 2025 · New Orleans</p>
+      <h3>AGU Fall Meeting workshop</h3>
+      <p>Co-organized and taught <em>Large-Scale Geospatial Data Analysis and Visualization in R</em>.</p>
+    </div>
+    <div class="item">
+      <p class="when">August 2025 · J-Village, Japan</p>
+      <h3>Kirkham Conference</h3>
+      <p>Co-organized Rapid Poster Presentations Session #3.</p>
+    </div>
+    <div class="item">
+      <p class="when">LSU Graduate Student Association</p>
+      <h3>Student leadership</h3>
+      <p>Vice President (2026–present); Treasurer (2025–2026).</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>School of Plant, Environmental, and Soil Sciences<br>Louisiana State University<br>Baton Rouge, Louisiana</p>
+    <p class="email-row">
+      <a href="mailto:FAdekilae@agcenter.lsu.edu">FAdekilae@agcenter.lsu.edu</a>
+      <button class="copy" type="button" id="copyEmail">Copy email</button>
+    </p>
+    <p class="profiles">
+      <a href="https://github.com/adekilae" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://orcid.org/0009-0000-1387-2148" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://scholar.google.com/citations?user=CMnls_MAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+    </p>
+  </section>
 </main>
-<footer class="footer"><div class="wrap">© 2026 Frank Anyoka Adekilae · Built with GitHub Pages</div></footer>
+
+<footer>
+  <div class="wrap">© 2026 Frank Anyoka Adekilae</div>
+</footer>
+
 <script>
   (function () {
     var btn = document.getElementById('copyEmail');
     var email = 'FAdekilae@agcenter.lsu.edu';
     btn.addEventListener('click', function () {
-      function done() { btn.textContent = 'Copied!'; setTimeout(function () { btn.textContent = 'Copy email'; }, 2000); }
+      function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy email'; }, 2000); }
       if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(email).then(done, function () { window.prompt('Copy this email address:', email); });
       } else {
