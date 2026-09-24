@@ -85,6 +85,21 @@
     .pub h3 a:hover{color:var(--maroon)}
     .note{color:var(--muted);font-style:italic;margin-top:18px}
 
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .gallery figure{margin:0}
+    .gallery a{display:block;overflow:hidden;background:var(--line)}
+    .gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;transition:transform .3s}
+    .gallery a:hover img{transform:scale(1.03)}
+    .gallery .wide{grid-column:span 2}
+    .gallery .wide img{aspect-ratio:3/2}
+    .gallery figcaption{font-size:.95rem;color:var(--muted);margin-top:8px;line-height:1.45}
+    .lightbox{position:fixed;inset:0;background:rgba(10,20,21,.9);display:none;align-items:center;justify-content:center;padding:24px;z-index:50;cursor:zoom-out}
+    .lightbox.open{display:flex}
+    .lightbox figure{margin:0;max-width:100%;text-align:center}
+    .lightbox img{max-width:100%;max-height:82vh;display:block;margin:0 auto}
+    .lightbox figcaption{color:#e6eeed;margin-top:12px}
+
     /* Footer */
     footer{background:var(--teal-dark);color:#cfdcdb;padding:36px 0;font-size:.95rem}
     footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
@@ -95,6 +110,7 @@
       .profile .wrap{grid-template-columns:1fr}
       .photo{max-width:320px}
       .cols,.two{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr 1fr;gap:16px}
     }
     @media(max-width:600px){
       body{font-size:17px}
@@ -128,6 +144,7 @@
       <a href="#publications">Publications</a>
       <a href="#awards">Awards</a>
       <a href="#service">Service</a>
+      <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -165,6 +182,7 @@
     <a href="#publications">Publications</a>
     <a href="#awards">Awards</a>
     <a href="#service">Service &amp; Leadership</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -285,11 +303,10 @@
             <h3>AGU Fall Meeting workshop</h3>
             <p>Co-organizer and instructor, <em>Large-Scale Geospatial Data Analysis and Visualization in R</em>. <a href="https://vinit-sehgal.github.io/lgar/" target="_blank" rel="noopener">Course materials</a></p>
           </div>
-            <div class="entry">
+          <div class="entry">
             <p class="when">June 2025 · Fort Collins, Colorado</p>
             <h3>2025 National Soil Moisture Workshop</h3>
             <p>Oral presentation, <em>Enhancing Rootzone Soil Moisture Dynamics Estimation with a State-Based Model</em>. <a href="https://www.youtube.com/watch?v=3IShioImcZY" target="_blank" rel="noopener">Watch the recording</a></p>
-          </div>
           </div>
         </div>
         <div>
@@ -308,7 +325,79 @@
     </div>
   </section>
 
-  <section id="contact" class="shade">
+  <section id="gallery" class="shade">
+    <div class="wrap">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <figure>
+          <a href="agu2025-workshop.jpg"><img src="agu2025-workshop.jpg" alt="Frank teaching at a podium during the AGU 2025 R workshop" loading="lazy" /></a>
+          <figcaption>Teaching the geospatial analysis in R workshop, AGU Fall Meeting 2025, New Orleans</figcaption>
+        </figure>
+        <figure>
+          <a href="agu2025-poster.jpg"><img src="agu2025-poster.jpg" alt="Frank beside his research poster at AGU 2025" loading="lazy" /></a>
+          <figcaption>Poster presentation, AGU Fall Meeting 2025, New Orleans</figcaption>
+        </figure>
+        <figure>
+          <a href="agu2025.jpg"><img src="agu2025.jpg" alt="Frank at the AGU 2025 photo wall" loading="lazy" /></a>
+          <figcaption>AGU Fall Meeting 2025, New Orleans</figcaption>
+        </figure>
+        <figure>
+          <a href="canvas2025-talk.jpg"><img src="canvas2025-talk.jpg" alt="Frank giving an oral presentation at CANVAS 2025" loading="lazy" /></a>
+          <figcaption>Oral presentation, CANVAS 2025 (ASA, CSSA, SSSA Annual Meeting), Salt Lake City</figcaption>
+        </figure>
+        <figure>
+          <a href="canvas2025-poster.jpg"><img src="canvas2025-poster.jpg" alt="Frank discussing his research poster with a visitor at CANVAS 2025" loading="lazy" /></a>
+          <figcaption>Discussing my poster at CANVAS 2025, Salt Lake City</figcaption>
+        </figure>
+        <figure>
+          <a href="kirkham2025-talk.jpg"><img src="kirkham2025-talk.jpg" alt="Frank presenting at the 2025 Kirkham Conference" loading="lazy" /></a>
+          <figcaption>Presenting at the 2025 Kirkham Conference, J-Village, Fukushima, Japan</figcaption>
+        </figure>
+        <figure>
+          <a href="kirkham2025.jpg"><img src="kirkham2025.jpg" alt="Frank outside the J-Village National Training Center" loading="lazy" /></a>
+          <figcaption>At J-Village for the 2025 Kirkham Conference, Fukushima, Japan</figcaption>
+        </figure>
+        <figure>
+          <a href="lacadian-field.jpg"><img src="lacadian-field.jpg" alt="Frank installing sensors on a LaCADIAN monitoring station in a field" loading="lazy" /></a>
+          <figcaption>Installing a LaCADIAN (Louisiana Climate &amp; Digital Ag Network) monitoring station with the LSU SHaRE Lab</figcaption>
+        </figure>
+        <figure>
+          <a href="lacadian-coring.jpg"><img src="lacadian-coring.jpg" alt="Frank and colleagues taking a soil core beside a LaCADIAN station" loading="lazy" /></a>
+          <figcaption>Soil coring during a LaCADIAN station installation with the LSU SHaRE Lab</figcaption>
+        </figure>
+        <figure>
+          <a href="lacadian-lab.jpg"><img src="lacadian-lab.jpg" alt="Frank with assembled LaCADIAN monitoring stations in the lab" loading="lazy" /></a>
+          <figcaption>Preparing LaCADIAN stations in the SHaRE Lab before field deployment</figcaption>
+        </figure>
+        <figure>
+          <a href="ghent-university.jpg"><img src="ghent-university.jpg" alt="Frank standing in a lecture room at Ghent University" loading="lazy" /></a>
+          <figcaption>At Ghent University, Belgium · Erasmus Mundus MSc in Soils and Global Change</figcaption>
+        </figure>
+        <figure>
+          <a href="aarhus-lab-1.jpg"><img src="aarhus-lab-1.jpg" alt="Frank in a lab coat running an experiment at a computer in an Aarhus University lab" loading="lazy" /></a>
+          <figcaption>Laboratory work at Aarhus University, Foulum, Denmark · Erasmus Mundus MSc</figcaption>
+        </figure>
+        <figure>
+          <a href="aarhus-lab-2.jpg"><img src="aarhus-lab-2.jpg" alt="Frank setting up a laboratory experiment at Aarhus University" loading="lazy" /></a>
+          <figcaption>Setting up a laboratory experiment at Aarhus University, Foulum, Denmark</figcaption>
+        </figure>
+        <figure class="wide">
+          <a href="aarhus-foulum.jpg"><img src="aarhus-foulum.jpg" alt="Frank standing beside the Aarhus University Foulum entrance sign" loading="lazy" /></a>
+          <figcaption>Aarhus University Foulum, Danish Centre for Food and Agriculture · Erasmus Mundus MSc in Soils and Global Change</figcaption>
+        </figure>
+        <figure>
+          <a href="world-soil-museum-exhibit.jpg"><img src="world-soil-museum-exhibit.jpg" alt="Frank exploring the Soil and Landscape exhibit at the World Soil Museum" loading="lazy" /></a>
+          <figcaption>Exploring the Soil and Landscape exhibit at the World Soil Museum, Wageningen, Netherlands</figcaption>
+        </figure>
+        <figure class="wide">
+          <a href="world-soil-museum.jpg"><img src="world-soil-museum.jpg" alt="Frank at the World Soil Museum entrance wall in Wageningen" loading="lazy" /></a>
+          <figcaption>Visiting the World Soil Museum, Wageningen, Netherlands</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
     <div class="wrap">
       <h2>Contact</h2>
       <div class="two">
@@ -335,6 +424,25 @@
   </div>
 </footer>
 
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Photo viewer"><figure><img alt="" /><figcaption></figcaption></figure></div>
+
+<script>
+  (function () {
+    var box = document.getElementById('lightbox');
+    var img = box.querySelector('img'), cap = box.querySelector('figcaption');
+    document.querySelectorAll('.gallery a').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        img.src = a.getAttribute('href');
+        img.alt = a.querySelector('img').alt;
+        cap.textContent = a.parentNode.querySelector('figcaption').textContent;
+        box.classList.add('open');
+      });
+    });
+    box.addEventListener('click', function () { box.classList.remove('open'); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') box.classList.remove('open'); });
+  })();
+</script>
 <script>
   (function () {
     var email = 'FAdekilae@agcenter.lsu.edu';
