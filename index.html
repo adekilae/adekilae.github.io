@@ -94,6 +94,16 @@
     .pub h3 a:hover{color:var(--maroon)}
     .note{color:var(--muted);font-style:italic;margin-top:18px}
 
+    /* Tags (skills) and small subheadings */
+    .sub{font-family:"Signika",Arial,sans-serif;font-size:1.05rem;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:.06em;margin:28px 0 12px}
+    .sub:first-of-type{margin-top:0}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .tags span{font-size:.9rem;background:#fff;border:1px solid var(--line);border-radius:3px;padding:2px 10px;color:var(--ink)}
+    .plain{list-style:none;padding:0;margin:0}
+    .plain li{padding:10px 0;border-top:1px solid var(--line)}
+    .plain li:first-child{border-top:0;padding-top:0}
+    .plain .yr{color:var(--maroon);font-weight:600;font-size:.92rem;white-space:nowrap}
+
     /* Gallery */
     .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
     .gallery figure{margin:0}
@@ -149,10 +159,12 @@
     <a class="wordmark" href="#home"><b>Frank Anyoka Adekilae</b><span>Soil Physics · Hydrology · Remote Sensing</span></a>
     <nav class="mainnav" aria-label="Main navigation">
       <a href="#about">About</a>
+      <a href="#education">Education</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
+      <a href="#presentations">Presentations</a>
       <a href="#awards">Awards</a>
-      <a href="#service">Service</a>
+      <a href="#experience">Experience</a>
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -214,14 +226,35 @@
           </li>
         </ul>
         <div class="bio">
-                    <p>I am a PhD student and research assistant in the Soil Hydrology and Remote Sensing (SHaRE) Lab, School of Plant, Environmental, and Soil Sciences (SPESS) at Louisiana State University. I hold an Erasmus Mundus MSc in Soils and Global Change from Ghent University and Aarhus University, and a BSc in Natural Resources Management from Kwame Nkrumah University of Science and Technology, Ghana.</p>
+                    <p>I am a PhD student and research assistant in the Soil Hydrology and Remote Sensing (SHaRE) Lab, School of Plant, Environmental, and Soil Sciences (SPESS) at Louisiana State University.</p>
           <p>My research focuses on soil moisture dynamics, particularly the relationship between near-surface observations and rootzone soil water storage. I combine field measurements, satellite remote sensing, and computational methods to improve drought monitoring and support agricultural decision-making.</p>
      </div>
       </div>
     </div>
   </div>
 
-  <section id="research" class="shade">
+  <section id="education" class="shade">
+    <div class="wrap">
+      <h2>Education</h2>
+      <div class="entry">
+        <p class="when">August 2024 – Present · Expected completion May 2030</p>
+        <h3>PhD, Plant, Environmental, and Soil Sciences</h3>
+        <p>Louisiana State University, Baton Rouge, Louisiana, USA · Concentration: Soil Physics and Remote Sensing</p>
+      </div>
+      <div class="entry">
+        <p class="when">Completed July 2024 · Distinction</p>
+        <h3>International MSc in Soils and Global Change (Erasmus Mundus)</h3>
+        <p>Ghent University, Belgium, and Aarhus University, Denmark · Specialization: Physical Land Resources and Global Change</p>
+      </div>
+      <div class="entry">
+        <p class="when">Completed September 2021 · First Class Honours</p>
+        <h3>BSc, Natural Resources Management</h3>
+        <p>Kwame Nkrumah University of Science and Technology (KNUST), Kumasi, Ghana · Specialization: Silviculture and Forest Management</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
     <div class="wrap">
       <h2>Research Interests</h2>
       <div class="cols">
@@ -241,7 +274,7 @@
     </div>
   </section>
 
-  <section id="publications">
+  <section id="publications" class="shade">
     <div class="wrap">
       <h2>Publications</h2>
       <div class="entry pub">
@@ -250,6 +283,32 @@
         <p><em>Vadose Zone Journal</em> · <a href="https://doi.org/10.1002/vzj2.70084" target="_blank" rel="noopener">doi:10.1002/vzj2.70084</a></p>
       </div>
       <p class="note">Additional publications will be added as they become available.</p>
+    </div>
+  </section>
+
+  <section id="presentations">
+    <div class="wrap">
+      <h2>Conference Presentations</h2>
+      <div class="entry">
+        <p class="when">December 2025 · New Orleans, Louisiana · Poster</p>
+        <h3>Modeling rootzone moisture dynamics from surface observations using pseudo-diffusivity</h3>
+        <p>Adekilae, F. A., &amp; Sehgal, V. · American Geophysical Union (AGU) Fall Meeting</p>
+      </div>
+      <div class="entry">
+        <p class="when">November 2025 · Salt Lake City, Utah · Short oral presentation and poster</p>
+        <h3>Influence of soil and climate on surface–rootzone hydrologic connectivity</h3>
+        <p>Adekilae, F. A., &amp; Sehgal, V. · CANVAS 2025 (ASA, CSSA, SSSA Annual Meeting)</p>
+      </div>
+      <div class="entry">
+        <p class="when">August 2025 · Fukushima, Japan · Flash oral presentation and poster</p>
+        <h3>Enhancing rootzone soil moisture dynamics estimation with a state-based low-pass filter</h3>
+        <p>Adekilae, F. A., &amp; Sehgal, V. · 2025 Kirkham Conference</p>
+      </div>
+      <div class="entry">
+        <p class="when">June 2025 · Fort Collins, Colorado · Oral presentation</p>
+        <h3>Enhancing rootzone soil moisture dynamics estimation with a state-based model</h3>
+        <p>Adekilae, F. A., &amp; Sehgal, V. · 2025 National Soil Moisture Workshop, Colorado State University · <a href="https://www.youtube.com/watch?v=3IShioImcZY" target="_blank" rel="noopener">Watch the recording</a></p>
+      </div>
     </div>
   </section>
 
@@ -284,7 +343,29 @@
     </div>
   </section>
 
-  <section id="service">
+  <section id="experience">
+    <div class="wrap">
+      <h2>Research &amp; Field Experience</h2>
+      <div class="two">
+        <div>
+          <div class="entry">
+            <p class="when">February – August 2022 · Ghana</p>
+            <h3>Field Assistant, EU-funded ReDIAL Project</h3>
+            <p>Kwame Nkrumah University of Science and Technology. Led farmer training on sustainable fertilization and conservation agriculture, coordinated soil sampling and field data collection, and supported climate-smart agriculture and sustainable land management with farming communities.</p>
+          </div>
+        </div>
+        <div>
+          <div class="entry">
+            <p class="when">March – May 2022 · Remote</p>
+            <h3>Remote Conservation Extern</h3>
+            <p>National Geographic Society and The Nature Conservancy. Researched marine conservation challenges and community impacts, engaged community leaders and conservation practitioners, conducted a landscape and gap analysis, and developed a community-focused conservation proposal. <a href="https://storymaps.arcgis.com/stories/1a17916adf39449abb6116eadfd2269a" target="_blank" rel="noopener">View my StoryMap: <em>The Story of the Hammerhead Shark Fishery in Ghana</em></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="service" class="shade">
     <div class="wrap">
       <h2>Service &amp; Leadership</h2>
       <div class="two">
@@ -299,11 +380,6 @@
             <h3>AGU Fall Meeting workshop</h3>
             <p>Co-organizer and instructor, <em>Large-Scale Geospatial Data Analysis and Visualization in R</em>. <a href="https://vinit-sehgal.github.io/lgar/" target="_blank" rel="noopener">Course materials</a></p>
           </div>
-          <div class="entry">
-            <p class="when">June 2025 · Fort Collins, Colorado</p>
-            <h3>2025 National Soil Moisture Workshop</h3>
-            <p>Oral presentation, <em>Enhancing Rootzone Soil Moisture Dynamics Estimation with a State-Based Model</em>. <a href="https://www.youtube.com/watch?v=3IShioImcZY" target="_blank" rel="noopener">Watch the recording</a></p>
-          </div>
         </div>
         <div>
           <div class="entry">
@@ -314,8 +390,85 @@
           <div class="entry">
             <p class="when">Louisiana State University</p>
             <h3>SPESS Graduate Student Association</h3>
-            <p>Vice President (2026–present); Treasurer (2025–2026).</p>
+            <p>Vice President (September 2026–present); Treasurer (October 2025–September 2026).</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="community">
+    <div class="wrap">
+      <h2>Community Engagement</h2>
+      <div class="entry">
+        <p class="when">September 2018 – Present · Natugnia, Ghana</p>
+        <h3>Team Leader, Campaign Against Child Marriage</h3>
+        <p>Lead annual community education and awareness initiatives on child marriage and its social and educational impacts; mentor youth on academic achievement and personal development; coordinate community stakeholders and volunteers; and lead fundraising for outreach, student recognition, and educational initiatives.</p>
+      </div>
+      <div class="entry">
+        <p class="when">April – December 2020 · Natugnia, Ghana</p>
+        <h3>Community COVID-19 Sensitization Team Leader</h3>
+        <p>Led community COVID-19 awareness and public-health education in the local language and coordinated communication of safety practices.</p>
+      </div>
+      <div class="entry">
+        <p class="when">May – July 2018 · Ghana</p>
+        <h3>Science and Mathematics Volunteer Teacher</h3>
+        <p>Saabisi Junior High School. Taught foundational science and mathematics and developed instructional materials for junior high school students.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="shade">
+    <div class="wrap">
+      <h2>Skills &amp; Tools</h2>
+      <div class="cols">
+        <div>
+          <h3>Programming &amp; Analysis</h3>
+          <div class="tags"><span>R</span><span>Python</span><span>MATLAB</span><span>SPSS</span><span>Statistical modeling</span><span>Time-series analysis</span><span>Inverse modeling</span><span>Parallel computing</span></div>
+        </div>
+        <div>
+          <h3>Soil &amp; Hydrologic Modeling</h3>
+          <div class="tags"><span>HYDRUS-1D</span><span>RETC</span><span>AquaCrop</span><span>SoilView</span><span>Soil hydraulic characterization</span><span>Rootzone soil moisture modeling</span></div>
+        </div>
+        <div>
+          <h3>Geospatial &amp; Remote Sensing</h3>
+          <div class="tags"><span>Google Earth Engine</span><span>ArcGIS Pro</span><span>QGIS</span><span>ERDAS Imagine</span><span>NASA SMAP</span><span>NetCDF/HDF5</span></div>
+        </div>
+        <div>
+          <h3>Environmental Data</h3>
+          <div class="tags"><span>USCRN</span><span>SCAN</span><span>SoilGrids250m</span><span>CGIAR aridity</span><span>Data quality control</span></div>
+        </div>
+        <div>
+          <h3>Field &amp; Laboratory</h3>
+          <div class="tags"><span>Sensor installation</span><span>Soil sampling</span><span>HYPROP</span><span>WP4C</span><span>KSAT</span><span>Particle-size analysis</span><span>Bulk density</span></div>
+        </div>
+        <div>
+          <h3>Communication</h3>
+          <div class="tags"><span>Scientific writing</span><span>Conference presentations</span><span>Peer review</span><span>Workshop instruction</span><span>Student mentoring</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="memberships">
+    <div class="wrap">
+      <h2>Memberships</h2>
+      <div class="two">
+        <div>
+          <p class="sub">Professional Societies</p>
+          <ul class="plain">
+            <li>American Geophysical Union (AGU), Student Member <span class="yr">· 2025–Present</span></li>
+            <li>American Society of Agronomy (ASA), Graduate Student Member <span class="yr">· 2024–Present</span></li>
+            <li>Crop Science Society of America (CSSA), Graduate Student Member <span class="yr">· 2024–Present</span></li>
+            <li>Soil Science Society of America (SSSA), Graduate Student Member <span class="yr">· 2024–Present</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="sub">Honor Societies</p>
+          <ul class="plain">
+            <li>The Honor Society of Phi Kappa Phi, Member <span class="yr">· 2026–Present</span></li>
+            <li>Gamma Beta Phi National Honor Society, Member <span class="yr">· 2025–Present</span></li>
+          </ul>
         </div>
       </div>
     </div>
