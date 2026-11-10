@@ -107,6 +107,17 @@
     .pub h3 a{color:var(--ink)}
     .pub h3 a:hover{color:var(--maroon)}
     .note{color:var(--muted);font-style:italic;margin-top:18px}
+    .proj{border:1px solid var(--line);border-radius:6px;padding:28px 30px;background:#fff}
+    .proj h3{font-size:1.5rem;font-weight:600;color:var(--ink);margin:0 0 4px}
+    .proj .tag{color:var(--maroon);font-weight:600;margin:0 0 14px}
+    .proj .links{display:flex;flex-wrap:wrap;gap:6px 24px;margin:16px 0 0;padding:0;list-style:none}
+    .proj details{margin-top:20px;border-top:1px solid var(--line);padding-top:16px}
+    .proj summary{cursor:pointer;font-family:"Signika",Arial,sans-serif;font-size:1.1rem;font-weight:600;color:var(--teal)}
+    .proj details h4{font-family:"Signika",Arial,sans-serif;font-size:1.05rem;font-weight:600;color:var(--teal);margin:26px 0 8px}
+    .proj details p,.proj details li{color:var(--muted);margin:0 0 10px}
+    .proj details ol,.proj details ul{padding-left:22px;margin:0 0 10px}
+    .proj code{background:var(--soft);padding:1px 5px;border-radius:3px;font-size:.92em;color:var(--ink)}
+    .proj .formula{display:block;padding:10px 14px;margin:8px 0 12px;overflow-x:auto;white-space:normal}
 
     /* Tags (skills) and small subheadings */
     .sub{font-family:"Signika",Arial,sans-serif;font-size:1.05rem;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:.06em;margin:28px 0 12px}
@@ -179,6 +190,7 @@
       <a href="#presentations">Presentations</a>
       <a href="#awards">Awards</a>
       <a href="#experience">Experience</a>
+      <a href="#portfolio">Portfolio</a>
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -490,6 +502,60 @@
         <li>Crop Science Society of America (CSSA), Graduate Student Member <span class="yr">· 2024–Present</span></li>
         <li>Soil Science Society of America (SSSA), Graduate Student Member <span class="yr">· 2024–Present</span></li>
       </ul>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="wrap">
+      <h2>Portfolio</h2>
+      <div class="proj">
+        <h3>Tinga Lens</h3>
+        <p class="tag">A reproducible, district-level environmental intelligence platform for Ghana</p>
+        <p>Tinga Lens is an independently developed environmental monitoring platform that turns public Earth observation, climate, soil, land-cover and biodiversity data into district-level information for Ghana. It covers 260 districts and presents the results as interactive maps, district profiles, downloadable outputs and plain-language explanations. Its outputs are not official warnings or field measurements. I am the project owner and developer.</p>
+        <ul class="links">
+          <li><a href="https://tingalens.org" target="_blank" rel="noopener">tingalens.org</a></li>
+          <li><a href="https://github.com/tinga-lens/tinga-lens.github.io" target="_blank" rel="noopener">Source code on GitHub</a></li>
+          <li><a href="https://doi.org/10.5281/zenodo.23271191" target="_blank" rel="noopener">Archived release v1.0.0 (Zenodo)</a></li>
+        </ul>
+        <details>
+          <summary>Read the case study</summary>
+          <h4>The problem</h4>
+          <p>Environmental data come from many independent providers, and using them together at district scale means working across different grids, time steps, formats, product definitions, access systems and licences. Users also need to know an indicator's reference period, source, uncertainty and meaning, not only its value.</p>
+          <h4>What I built</h4>
+          <p>A Python data-processing and update framework and a JavaScript web application. The repository separates the data-ingestion and indicator scripts (<code>scripts/</code>), the processed outputs (<code>data/</code>), the product configuration and interactive maps (<code>js/</code>) and the documentation (<code>docs/</code>). The script <code>scripts/update.py</code> runs each product according to data availability, required credentials, existing output files and rebuild rules. A GitHub Actions workflow runs the processing every Monday and publishes the updated datasets.</p>
+          <p>The inputs include CHIRPS rainfall, NASA SMAP Level-4 soil moisture, NASA VIIRS vegetation and active-fire data, Copernicus Sentinel-1 flood products, forest and human-modification products, agricultural and soil information, and GBIF occurrence records. Some products use Google Earth Engine, and others use files downloaded directly. The tools are Python, NumPy, pandas, GeoPandas, Rasterio, scikit-learn, NASA Earthdata access, the Google Earth Engine API, JavaScript and Leaflet.</p>
+          <h4>Example: district rainfall anomalies</h4>
+          <p>The drought pipeline (<code>scripts/drought.py</code>) turns monthly CHIRPS rainfall into a district-level three-month rainfall indicator:</p>
+          <ol>
+            <li>Retrieves compatible CHIRPS monthly grids, preferring CHIRPS v3.0 when it is available.</li>
+            <li>Aggregates the monthly rasters to Ghana's districts, with special treatment for districts smaller than a grid cell.</li>
+            <li>Computes rolling three-month totals for every district.</li>
+            <li>Compares the latest total with the totals ending in the same month across 1991–2020.</li>
+            <li>Calculates an empirical percentile, with ties counted as half, and assigns a relative dryness class.</li>
+            <li>Leaves a district unrated when its baseline three-month rainfall is below 30 mm.</li>
+            <li>Publishes the summary maps and each district's rainfall history as JSON files.</li>
+          </ol>
+          <p>The percentile is <code class="formula">P = 100 × (number of baseline totals below the current value + 0.5 × number tied) / number of baseline years</code></p>
+          <p>This indicator shows rainfall relative to a district's own history. It does not directly measure crop damage, streamflow, groundwater or hydrological drought.</p>
+          <h4>Architecture and operations</h4>
+          <p>Input data → product-specific Python processing → district-level JSON datasets → JavaScript and Leaflet maps and downloads. The scheduled workflow installs the dependencies, restores download caches, runs the processing script and commits the changed data files. Credentials for NASA Earthdata, FIRMS, GBIF and Google Earth Engine are read from repository secrets and are not in the published scripts. Datasets that update regularly are kept separate from those rebuilt only when a source or model changes. The workflow lets each layer finish even if another one fails, so successful layers are published and failures are reported afterwards.</p>
+          <h4>Quality control and limits</h4>
+          <p>Tinga Lens labels the type of evidence behind each product: observations, environmental conditions, products published by others, derived estimates and experimental models. This keeps model output from being presented as direct measurement.</p>
+          <p>The validation notes report a leave-one-fire-year-out test of the experimental fire-probability model, with ROC-AUC, Brier scores, calibration and a comparison with a seasonal reference model. They also include event-based checks of selected flood outputs against other mapped events and public reports. These are preliminary evaluations and not a systematic ground validation of every map.</p>
+          <p>Known limits are the use of district averages, reference periods that differ between products, bias in species occurrence records, cloud and revisit constraints, classification uncertainty, and the lack of systematic comparison with ground measurements in Ghana for most products.</p>
+          <h4>Reproducibility and licensing</h4>
+          <p>The code is public on GitHub and a versioned release is archived on Zenodo. The README explains how to install the dependencies and run the update process, and some products need external accounts. The code is under the MIT licence, original documentation and data are under CC BY-NC 4.0, and third-party terms apply to the source data.</p>
+          <h4>What this shows</h4>
+          <ul>
+            <li>Coverage of 260 Ghanaian districts through one common reporting interface.</li>
+            <li>Integration of many independent environmental data sources and product types.</li>
+            <li>An automated, scheduled update workflow with product-specific rebuild logic.</li>
+            <li>A public site and repository, with a citable Zenodo release (v1.0.0).</li>
+            <li>Documented experimental model validation and known limitations.</li>
+          </ul>
+          <p>I make no claims here about user numbers, prediction skill across all products or uptime, because those have not been measured. The case study is based on the public repository and website as reviewed on 9 November 2026.</p>
+        </details>
+      </div>
     </div>
   </section>
 
