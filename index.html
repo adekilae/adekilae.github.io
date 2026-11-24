@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Frank Anyoka Adekilae is a PhD student and research assistant in the SHaRE Lab at Louisiana State University and the founder of Tinga Lens, studying soil moisture dynamics, satellite remote sensing, and drought monitoring." />
+  <meta name="description" content="Frank Anyoka Adekilae is a PhD student and research assistant in the SHaRE Lab at Louisiana State University and the founder of TingaLens, studying soil moisture dynamics, satellite remote sensing, and drought monitoring." />
   <meta name="author" content="Frank Anyoka Adekilae" />
   <title>Frank Anyoka Adekilae</title>
    <link rel="icon" href="favicon.ico" sizes="any" />
@@ -26,7 +26,7 @@
     "url": "https://frankadekilae.com/",
     "jobTitle": "PhD Student and Research Assistant",
     "affiliation": {"@type": "CollegeOrUniversity", "name": "Louisiana State University"},
-    "owns": {"@type": "Organization", "name": "Tinga Lens", "url": "https://tingalens.org"}
+    "owns": {"@type": "Organization", "name": "TingaLens", "url": "https://tingalens.org"}
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -227,7 +227,7 @@
     <div class="wrap">
       <img class="photo" src="images/profile.jpg" alt="Portrait of Frank Anyoka Adekilae" />
       <div>
-        <p class="title">PhD Student &amp; Research Assistant<br>Founder, Tinga Lens</p>
+        <p class="title">PhD Student &amp; Research Assistant<br>Founder, TingaLens</p>
         <ul class="facts">
           <li>
             <svg class="i" viewBox="0 0 16 16"><path d="M3 1.5h10v13H3zM6 4.5h1M9 4.5h1M6 7.5h1M9 7.5h1M7 14.5v-3h2v3"/></svg>
@@ -254,7 +254,7 @@
         <div class="bio">
                     <p>I am a PhD student and research assistant in the Soil Hydrology and Remote Sensing (SHaRE) Lab, School of Plant, Environmental, and Soil Sciences (SPESS) at Louisiana State University.</p>
           <p>My research focuses on soil moisture dynamics, particularly the relationship between near-surface observations and rootzone soil water storage. I combine field measurements, satellite remote sensing, and computational methods to improve drought monitoring and support agricultural decision-making.</p>
-          <p>I am also the founder of <a href="https://tingalens.org" target="_blank" rel="noopener">Tinga Lens</a>, an independent project that turns public satellite data into district-level maps of drought, fire, vegetation, flooding and more for Ghana.</p>
+          <p>I am also the founder of <a href="https://tingalens.org" target="_blank" rel="noopener">TingaLens</a>, an independent project that turns public satellite data into district-level maps of drought, fire, vegetation, flooding and more for Ghana.</p>
      </div>
       </div>
     </div>
@@ -415,7 +415,7 @@
         <div>
           <div class="entry">
             <p class="when">2026 – Present</p>
-            <h3>Founder, Tinga Lens</h3>
+            <h3>Founder, TingaLens</h3>
             <p>Started and lead an independent environmental monitoring project for Ghana. I choose the datasets, design the methods, build the processing, and review each map before it is published. <a href="https://tingalens.org" target="_blank" rel="noopener">tingalens.org</a></p>
           </div>
           <div class="entry">
@@ -509,9 +509,9 @@
     <div class="wrap">
       <h2>Portfolio</h2>
       <div class="proj">
-        <h3>Tinga Lens</h3>
+        <h3>TingaLens</h3>
         <p class="tag">A reproducible, district-level environmental intelligence platform for Ghana</p>
-        <p>Tinga Lens is an independently developed environmental monitoring platform that turns public Earth observation, climate, soil, land-cover and biodiversity data into district-level information for Ghana. It covers 260 districts and presents the results as interactive maps, district profiles, downloadable outputs and plain-language explanations. Its outputs are not official warnings or field measurements. I am the project owner and developer.</p>
+        <p>TingaLens is an independently developed environmental monitoring platform that turns public Earth observation, climate, soil, land-cover and biodiversity data into district-level information for Ghana. It covers 260 districts and presents the results as interactive maps, district profiles, downloadable outputs and plain-language explanations. Its outputs are not official warnings or field measurements. I am the project owner and developer.</p>
         <ul class="links">
           <li><a href="https://tingalens.org" target="_blank" rel="noopener">tingalens.org</a></li>
           <li><a href="https://github.com/tinga-lens/tinga-lens.github.io" target="_blank" rel="noopener">Source code on GitHub</a></li>
@@ -540,7 +540,7 @@
           <h4>Architecture and operations</h4>
           <p>Input data → product-specific Python processing → district-level JSON datasets → JavaScript and Leaflet maps and downloads. The scheduled workflow installs the dependencies, restores download caches, runs the processing script and commits the changed data files. Credentials for NASA Earthdata, FIRMS, GBIF and Google Earth Engine are read from repository secrets and are not in the published scripts. Datasets that update regularly are kept separate from those rebuilt only when a source or model changes. The workflow lets each layer finish even if another one fails, so successful layers are published and failures are reported afterwards.</p>
           <h4>Quality control and limits</h4>
-          <p>Tinga Lens labels the type of evidence behind each product: observations, environmental conditions, products published by others, derived estimates and experimental models. This keeps model output from being presented as direct measurement.</p>
+          <p>TingaLens labels the type of evidence behind each product: observations, environmental conditions, products published by others, derived estimates and experimental models. This keeps model output from being presented as direct measurement.</p>
           <p>The validation notes report a leave-one-fire-year-out test of the experimental fire-probability model, with ROC-AUC, Brier scores, calibration and a comparison with a seasonal reference model. They also include event-based checks of selected flood outputs against other mapped events and public reports. These are preliminary evaluations and not a systematic ground validation of every map.</p>
           <p>Known limits are the use of district averages, reference periods that differ between products, bias in species occurrence records, cloud and revisit constraints, classification uncertainty, and the lack of systematic comparison with ground measurements in Ghana for most products.</p>
           <h4>Reproducibility and licensing</h4>
